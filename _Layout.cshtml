@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - sıfır_atık</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/sıfır_atık.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark  py-3 bg-success">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-recycle d-inline-block align-text-top" alt="Logo" width="30" height="24"></i>
+                    <span id="font-logo">Doğayı sev</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link active  text-white" aria-current="page" href="#anaSayfa">AnaSayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-white" href="#hakkimizda">Hakkımızda</a>
+                        </li>
+                       
+                           <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Bagiss">Bağış</a>
+                          </li>
+                      
+                        
+                          <li class="nav-item">
+                            <a class="nav-link text-white " href="#Galeri">Galeri</a>
+                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Iletisim">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="container">
+       
+            @RenderBody()
+      
+    </div>
+    <footer class="text-dark bg-success">
+
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <h2 class="text-danger">7/24 ulaşabilirsiniz</h2>
+                </div>
+                <div class="terms">
+                    <p>Bize ulaşmak için 7/24 mail atabilirsiinz  saat:9:00 ile 17:00 saatleri arasında Bizi arayabilir ve okulumuzu ziyarette bulunabilrsiniz.</p>
+                </div>
+            </div>
+
+
+            <div class="box__footer">
+                <h2 class="text-danger">Bölümlerimiz</h2>
+                <a href="#">Robotik ve kodlama</a>
+                <a href="#">Web tasarımı</a>
+                <a href="#">siber güvenlik</a>
+                <a href="#">Ağ dalı yönetimi</a>
+            </div>
+
+            <div class="box__footer ">
+                <h2 class="text-danger">Sosyal meyalarımız</h2>
+                <a href="#"> <i class="bi bi-facebook"></i> Facebook</a>
+                <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="#"><i class="bi bi-linkedin"></i> Linkedin</a>
+                <a href="#"><i class="bi bi-instagram"></i>Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Tüm hakları kılıçarsan İMKB tarafından saklıdır © 2022 <b>Arda</b></p>
+        </div>
+    </footer>
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
